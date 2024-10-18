@@ -6,7 +6,7 @@ bot = telebot.TeleBot(API_TOKEN)
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    web_app_info = telebot.types.WebAppInfo("https://username.github.io/your-repo")
+    web_app_info = telebot.types.WebAppInfo("https://ineitoni.github.io/BTrade.io/")
     markup = telebot.types.InlineKeyboardMarkup()
     markup.add(telebot.types.InlineKeyboardButton("Open Web App", web_app=web_app_info))
     bot.send_message(message.chat.id, "Click the button to open the Web App:", reply_markup=markup)
